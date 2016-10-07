@@ -18,14 +18,14 @@ public class MainActivity extends AppCompatActivity {
     CheckBox cbBebas, cbDada, cbPunggung, cbKupu;
     Spinner spU;
     Button bOk;
-    TextView tvResult;
+    TextView tvHasil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        etNama = (EditText) findViewById(R.id.editName);
+        etNama = (EditText) findViewById(R.id.editNama);
         etAl = (EditText) findViewById(R.id.editAl);
         rbP = (RadioButton) findViewById(R.id.radioButtonP);
         rbL = (RadioButton) findViewById(R.id.radioButtonL);
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         cbKupu   =   (CheckBox) findViewById(R.id.checkBoxKupu);
         spU   =   (Spinner) findViewById(R.id.spinnerUsia);
         bOk =   (Button) findViewById(R.id.buttonOk);
-        tvResult = (TextView) findViewById(R.id.textViewResult);
+        tvHasil = (TextView) findViewById(R.id.textViewHasil);
 
         bOk.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,10 +59,10 @@ public class MainActivity extends AppCompatActivity {
                 if (cbKupu.isChecked()) gy+=cbKupu.getText() + "\n";
 
                 if (nama == null || al == null || jk == null || gy == null) {
-                    tvResult.setText("Form ada yang belum terisi!");
+                    tvHasil.setText("Form ada yang belum terisi!");
                 }
                 else {
-                    tvResult.setText("Selamat! Anda berhasil bergabung. Data Anda:" + "\nNama: " + nama + " \nAlamat: " + al + "\nJenis Kelamin: " + jk + " \nKelompok Usia: " + spU.getSelectedItem().toString() + gy);
+                    tvHasil.setText("Selamat! Anda berhasil bergabung. Data Anda:" + "\nNama: " + nama + " \nAlamat: " + al + "\nJenis Kelamin: " + jk + " \nKelompok Usia: " + spU.getSelectedItem().toString() + gy);
                 }
             }
         });

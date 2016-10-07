@@ -44,13 +44,13 @@
         android:text="Nama"
         android:id="@+id/textView4"
         android:layout_below="@+id/textView3"
-        android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editName"
+        android:id="@+id/editNama"
         android:layout_below="@+id/textView4"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -63,7 +63,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Alamat"
         android:id="@+id/textView5"
-        android:layout_below="@+id/editName"
+        android:layout_below="@+id/editNama"
         android:layout_alignLeft="@+id/textView6"
         android:layout_alignStart="@+id/textView6" />
 
@@ -74,8 +74,8 @@
         android:layout_below="@+id/textView5"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_alignRight="@+id/editName"
-        android:layout_alignEnd="@+id/editName" />
+        android:layout_alignRight="@+id/editNama"
+        android:layout_alignEnd="@+id/editNama" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -201,7 +201,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Result"
+        android:text="Hasil"
         android:id="@+id/textView"
         android:layout_below="@+id/buttonOk"
         android:layout_alignParentLeft="true"
@@ -210,8 +210,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Your result"
-        android:id="@+id/textViewResult"
+        android:text=" "
+        android:id="@+id/textViewHasil"
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
