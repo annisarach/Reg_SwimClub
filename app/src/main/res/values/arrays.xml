@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="kelUsia">
+        <item>dibawah 5 Tahun</item>
+        <item>6 Tahun - 10 Tahun</item>
+        <item>11 Tahun - 15 Tahun</item>
+        <item>16 Tahun - 19 Tahun</item>
+        <item>diatas 20 Tahun</item>
+    </string-array>
+</resources>
