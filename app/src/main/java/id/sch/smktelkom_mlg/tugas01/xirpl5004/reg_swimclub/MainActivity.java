@@ -2,6 +2,7 @@ package id.sch.smktelkom_mlg.tugas01.xirpl5004.reg_swimclub;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -35,6 +36,36 @@ public class MainActivity extends AppCompatActivity {
         spU   =   (Spinner) findViewById(R.id.spinnerUsia);
         bOk =   (Button) findViewById(R.id.buttonOk);
         tvResult = (TextView) findViewById(R.id.textViewResult);
+
+        bOk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String nama = etNama.getText().toString();
+                String al = etAl.getText().toString();
+
+                String jk = null;
+                if (rbP.isChecked()) {
+                    jk = rbP.getText().toString();
+                }
+                else if(rbL.isChecked()) {
+                    jk = rbL.getText().toString();
+                }
+
+                String gy = "\nGaya yang dikuasai:\n";
+                int lengy = gy.length();
+                if (cbBebas.isChecked()) gy+=cbBebas.getText() + "\n";
+                if (cbDada.isChecked()) gy+=cbDada.getText() + "\n";
+                if (cbPunggung.isChecked()) gy+=cbPunggung.getText() + "\n";
+                if (cbKupu.isChecked()) gy+=cbKupu.getText() + "\n";
+
+                if (nama == null || al == null || jk == null || gy == null) {
+                    tvResult.setText("Form ada yang belum terisi!");
+                }
+                else {
+                    tvResult.setText("Selamat! Anda berhasil bergabung. Data Anda:" + "\nNama: " + nama + " \nAlamat: " + al + "\nJenis Kelamin: " + jk + " \nKelompok Usia: " + spU.getSelectedItem().toString() + gy);
+                }
+            }
+        });
 
     }
 }
